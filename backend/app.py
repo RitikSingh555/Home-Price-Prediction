@@ -20,6 +20,10 @@ def load_resources():
 
 model, expected_columns = load_resources()
 
+@app.route('/')
+def home():
+   return jsonify({"message": "Home Price Prediction API", "status": "active"})
+
 @app.route('/predict', methods=['POST'])
 def predict():
     try:
