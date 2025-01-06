@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: backend
+    env: python
+    buildCommand: cd backend && pip install -r requirements.txt
+    startCommand: cd backend && gunicorn app:app
+    envVars:
+      - key: FLASK_ENV
+        value: production
+    plan: free
