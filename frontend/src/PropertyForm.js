@@ -77,7 +77,7 @@ const PropertyForm = () => {
       //For development
       //const response = await axios.post("http://127.0.0.1:5000/predict", formData);
       //For Production
-      const response = await axios.post("https://home-price-prediction-three.vercel.app/", formData);
+      const response = await axios.post("https://home-price-prediction-three.vercel.app/predict", formData);
       setPrediction(response.data.prediction);
     } catch (error) {
       console.error("Error submitting form:", error);
